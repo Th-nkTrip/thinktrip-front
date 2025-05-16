@@ -1,4 +1,7 @@
+import Link from "next/link";
+
 type FestivalCardProps = {
+  contentId: string;
   image: string;
   title: string;
   startDate: string;
@@ -7,6 +10,7 @@ type FestivalCardProps = {
 };
 
 const FestivalCard = ({
+  contentId,
   image,
   title,
   startDate,
@@ -22,20 +26,22 @@ const FestivalCard = ({
   };
 
   return (
-    <div className="festival-card">
-      <div className="image-container">
-        {image ? (
-          <img src={image} alt={title} className="festival-image" />
-        ) : null}
+    <Link href={`/Tour/${contentId}`}>
+      <div className="festival-card">
+        <div className="image-container">
+          {image ? (
+            <img src={image} alt={title} className="festival-image" />
+          ) : null}
+        </div>
+        <div className="festival-info">
+          <h3 className="festival-title">{title}</h3>
+          <p className="festival-date">
+            {formatDate(startDate)} ~ {formatDate(endDate)}
+          </p>
+          <p className="festival-location">{location}</p>
+        </div>
       </div>
-      <div className="festival-info">
-        <h3 className="festival-title">{title}</h3>
-        <p className="festival-date">
-          {formatDate(startDate)} ~ {formatDate(endDate)}
-        </p>
-        <p className="festival-location">{location}</p>
-      </div>
-    </div>
+    </Link>
   );
 };
 

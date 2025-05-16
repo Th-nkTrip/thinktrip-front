@@ -168,6 +168,42 @@
   padding: 60px 0;
 }
 
+.festival-detail-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.festival-detail-container .festival-header {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.festival-detail-container .poster img {
+  width: 300px;
+  height: auto;
+  border-radius: 16px;
+}
+
+.festival-detail-container .info p {
+  margin: 6px 0;
+  font-size: 16px;
+}
+
+.festival-detail-container .image-gallery {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.festival-detail-container .image-gallery img {
+  width: 300px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
 /*구름*/
 .cloud1 {
   position: absolute;
@@ -187,4 +223,137 @@
   height: auto;
   animation: floatAnimation 5s ease-in-out infinite;
   z-index: -1;
+}
+
+/*축제 상세정보 css*/
+/*상단*/
+.festival-detail-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #333;
+}
+
+.festival-detail-container .festival-detail-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* 제목, 부제목, 날짜 */
+.festival-detail-container .festival-header-block {
+  margin-bottom: 24px;
+}
+
+.festival-detail-container .festival-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.festival-detail-container .festival-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.festival-detail-container .d-day {
+  background-color: #8e44ad;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.festival-detail-container .festival-dates {
+  font-size: 15px;
+  color: #555;
+  font-weight: bolder;
+}
+
+/* 슬라이드 이미지 */
+.festival-detail-container .image-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  padding-bottom: 8px;
+}
+
+.festival-detail-container .image-slider img {
+  height: 200px;
+  width: 300px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/*개요 */
+.festival-detail-container .festival-description {
+  margin-top: 16px;
+}
+
+.festival-detail-container .overview-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  white-space: pre-line;
+}
+
+/*하단*/
+/*포스터*/
+.festival-detail-container .festival-info-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 40px;
+  align-items: flex-start;
+  border-top: 1px solid #b6b6b6;
+  padding-top: 60px;
+  margin-bottom: 50px;
+}
+
+.festival-detail-container .poster-area img {
+  width: 320px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/*기본 정보*/
+.festival-detail-container .info-area {
+  flex: 1;
+  min-width: 280px;
+}
+
+.festival-detail-container .info-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+.festival-detail-container .info-list li {
+  font-size: 18px;
+  font-weight: bolder;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.festival-detail-container .homepage-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+
+.festival-detail-container .homepage-btn:hover {
+  background-color: #f0f0f0;
 }

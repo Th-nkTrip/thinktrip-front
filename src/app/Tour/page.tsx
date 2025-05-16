@@ -109,6 +109,7 @@ export default function Tour() {
         ) : (
           festivals.map((item) => (
             <FestivalCard
+              contentId={item.contentid}
               key={item.contentid}
               image={item.firstimage}
               title={item.title}
